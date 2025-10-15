@@ -7,7 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
 		provideMcpServerDefinitions(): vscode.McpServerDefinition[] {
 			return [
 				new vscode.McpStdioServerDefinition(
-					'context7',
+					'upstash/context7',
 					'node',
 					[
 						path.join(__dirname, '..', 'node_modules', '@upstash', 'context7-mcp', 'dist', 'index.js'),
