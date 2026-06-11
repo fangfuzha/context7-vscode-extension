@@ -27,7 +27,7 @@ Once installed, the Context7 MCP server is available to VS Code's AI features (e
 
 You can also reference a library directly by its Context7 ID:
 
-```
+```text
 Implement basic authentication with Supabase. Use the API and documentation from the /supabase/supabase library.
 ```
 
@@ -50,7 +50,7 @@ The API key takes effect immediately — no window reload required.
 
 ### Project Structure
 
-```
+```text
 ├── src/
 │   └── extension.ts          # Main extension code
 ├── package.json              # Extension manifest
