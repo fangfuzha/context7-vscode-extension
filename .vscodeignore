@@ -1,0 +1,9 @@
+.github/
+.gitignore
+.vscode/
+src/
+tsconfig.json
+DEPLOYMENT.md
+*.vsix
+**/*.map
+.vscode-test/
