@@ -10,7 +10,7 @@
 
 ### Added
 
-- `context7.apiKey` setting: optionally provide a Context7 API key (from [context7.com/dashboard](https://context7.com/dashboard)) for higher rate limits and access to private repositories. Changes take effect without reloading the window.
+- `context7.apiKey` setting: optionally provide a Context7 API key (from [context7.com/dashboard](https://context7.com/dashboard)) for higher rate limits and access to private repositories. Changing the key stops the server; restart it via the `MCP: List Servers` command (no window reload needed).
 - MIT license text (the LICENSE file was previously empty).
 - CI workflows for build verification and Marketplace publishing.
 

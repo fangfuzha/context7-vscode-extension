@@ -40,7 +40,7 @@
 				"context7.apiKey": {
 					"type": "string",
 					"default": "",
-					"markdownDescription": "Optional Context7 API key for higher rate limits and access to private repositories. Get one at [context7.com/dashboard](https://context7.com/dashboard)."
+					"markdownDescription": "Optional Context7 API key for higher rate limits and access to private repositories. Get one at [context7.com/dashboard](https://context7.com/dashboard). Changing the key stops the server — restart it via the `MCP: List Servers` command (no window reload needed)."
 				}
 			}
 		}

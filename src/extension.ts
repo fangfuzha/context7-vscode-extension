@@ -6,8 +6,8 @@ export function activate(context: vscode.ExtensionContext) {
 	const didChangeServerDefinitions = new vscode.EventEmitter<void>();
 	context.subscriptions.push(didChangeServerDefinitions);
 
-	// Re-provide the server definition when the API key changes so the new
-	// header takes effect without reloading the window.
+	// Signal a definition change when the API key changes. VS Code stops the
+	// running server; the new header is used when the user restarts it.
 	context.subscriptions.push(
 		vscode.workspace.onDidChangeConfiguration((event) => {
 			if (event.affectsConfiguration('context7.apiKey')) {

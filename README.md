@@ -44,7 +44,7 @@ Implement basic authentication with Supabase. Use the API and documentation from
 |---------|-------------|
 | `context7.apiKey` | Optional Context7 API key for higher rate limits and private repositories. Get one at [context7.com/dashboard](https://context7.com/dashboard). |
 
-The API key takes effect immediately — no window reload required.
+Changing the API key stops the running server so the new key can be picked up. Restart it via **MCP: List Servers** → **Context7** → **Start Server** (or just send a new chat request, which prompts to start it) — no window reload required.
 
 ## Development
 
