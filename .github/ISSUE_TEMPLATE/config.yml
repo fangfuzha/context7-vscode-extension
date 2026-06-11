@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Context7 MCP server (tools, docs content, API keys)
+    url: https://github.com/upstash/context7/issues
+    about: Issues with the Context7 MCP server itself or the documentation it returns belong in the main Context7 repository.

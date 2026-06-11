@@ -2,26 +2,30 @@
 	"name": "context7-mcp",
 	"displayName": "Context7 MCP Server",
 	"description": "Real-time code and documentation access for AI assistants via Context7 MCP server",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"publisher": "Upstash",
 	"private": true,
 	"icon": "context7logo.png",
 	"license": "MIT",
-	"repository": "https://github.com/upstash/context7-vscode-extension",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/upstash/context7-vscode-extension.git"
+	},
 	"engines": {
 		"vscode": "^1.101.0"
 	},
 	"categories": [
 		"AI",
 		"Chat"
-	  ],
-	  "keywords": [
+	],
+	"keywords": [
 		"mcp",
+		"context7",
+		"documentation",
 		"ai",
 		"coding"
-	  ],
-	"activationEvents": [
-	  ],
+	],
+	"activationEvents": [],
 	"main": "./out/extension.js",
 	"contributes": {
 		"mcpServerDefinitionProviders": [
@@ -29,22 +33,26 @@
 				"id": "upstash/context7",
 				"label": "Context7"
 			}
-		]
+		],
+		"configuration": {
+			"title": "Context7",
+			"properties": {
+				"context7.apiKey": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Optional Context7 API key for higher rate limits and access to private repositories. Get one at [context7.com/dashboard](https://context7.com/dashboard)."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"download-api": "dts dev",
-		"postdownload-api": "dts main",
-		"postinstall": "npm run download-api"
-	},
-	"dependencies": {
-		"@upstash/context7-mcp": "1.0.14"
+		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
-		"@types/node": "^20",
-		"@vscode/dts": "^0.4.1",
+		"@types/node": "^22",
+		"@types/vscode": "^1.101.0",
 		"typescript": "^5.8.2"
 	}
 }
