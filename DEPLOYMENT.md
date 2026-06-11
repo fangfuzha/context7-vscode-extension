@@ -33,7 +33,12 @@ git tag v1.1.0
 git push origin v1.1.0
 ```
 
-The workflow requires a repository secret named `VSCE_PAT` containing an Azure DevOps Personal Access Token with the **Marketplace (Publish)** scope, created by a member of the Upstash publisher. See [Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token) for how to create one. Marketplace PATs expire (max 1 year) — rotate the secret when publishing starts failing with authentication errors.
+The workflow packages the extension once and publishes the same VSIX to both the Visual Studio Marketplace and [Open VSX](https://open-vsx.org). It requires two repository secrets:
+
+- `VSCE_PAT` — an Azure DevOps Personal Access Token with the **Marketplace (Publish)** scope, created by a member of the Upstash publisher. See [Publishing Extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token).
+- `OVSX_PAT` — an Open VSX access token from [open-vsx.org](https://open-vsx.org) → Settings → Access Tokens. The account must have signed the Eclipse Publisher Agreement and have access to the `Upstash` namespace.
+
+Both token types expire — rotate the secrets when publishing starts failing with authentication errors.
 
 ### Manual
 
